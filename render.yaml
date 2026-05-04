@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: zenrows-automation
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ZENROWS_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
+    autoDeploy: true
